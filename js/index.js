@@ -1,9 +1,13 @@
 const navToggle = document.querySelector('.nav-toggle');
+<<<<<<< HEAD
 const navLinks = document.querySelectorAll('.nav__link');
 const my_work = document.querySelector("#my-work");
 const modal_container = document.querySelector("#modal-container");
 const continue_button = document.querySelector("#continue");
 const go_to_github_button = document.querySelector("#go-to-github");
+=======
+const navLinks = document.querySelectorAll('.nav__link')
+>>>>>>> 706867d (first commit)
 
 navToggle.addEventListener('click', () => {
     document.body.classList.toggle('nav-open')
@@ -13,6 +17,7 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         document.body.classList.remove('nav-open');
     })
+<<<<<<< HEAD
 })
 
 my_work.addEventListener('click', () => {
@@ -41,3 +46,6 @@ function disableScrolling(){
 function enableScrolling(){
     window.onscroll=function(){};
 }
+=======
+})
+>>>>>>> 706867d (first commit)

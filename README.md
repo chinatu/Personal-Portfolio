@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # title(){return this.options.title||this.options.name}
 
@@ -18,3 +19,6 @@ in a while. So if you've ever wanted to "give back" to Scrimba, you can do that 
 Happy Coding!
 # Personal-Work
 >>>>>>> 17d922d (first commit)
+=======
+hope
+>>>>>>> 706867d (first commit)

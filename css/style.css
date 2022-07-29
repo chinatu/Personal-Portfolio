@@ -328,6 +328,7 @@ header{
 
 .service {
     max-width: 500px;
+<<<<<<< HEAD
     margin: 6 auto;
 }
 
@@ -406,6 +407,9 @@ header{
 .modal-container.show{
     opacity: 1;
     pointer-events: auto;
+=======
+    margin: 0 auto;
+>>>>>>> 706867d (first commit)
 }
 
 @media (min-width: 800px) {
