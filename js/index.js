@@ -41,3 +41,25 @@ function disableScrolling(){
 function enableScrolling(){
     window.onscroll=function(){};
 }
+
+
+const textToType = "Hi, my name is Chinatu Enyinnaya";
+
+// DOM element
+const typingTextElement = document.getElementById("typing-text");
+
+// Function to simulate typing effect
+function typeText() {
+    let index = 0;
+    const typingInterval = setInterval(function () {
+        typingTextElement.textContent += textToType[index];
+        index++;
+
+        if (index === textToType.length) {
+            clearInterval(typingInterval);
+        }
+    }, 100); // Adjust the interval to control typing speed
+}
+
+// Call the function to start the typing effect
+typeText();

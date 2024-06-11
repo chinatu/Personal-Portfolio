@@ -7,7 +7,7 @@
 /* Custom Properties, update these for your own design */
 
 :root {
-    --ff-primary: 'Lora', serif;
+    --ff-primary: 'Satoshi', serif;
     --ff-secondary: 'Roboto Slab', serif;
     
     --fw-reg: 400;
@@ -16,6 +16,7 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
+    --clr--grey: #808080;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -61,6 +62,11 @@ img {
 }
 
 strong{ font-weight: var(--fw-bold)}
+#pronunciation{
+    color: var(--clr--grey);
+    font-size: large;
+    align-items: left
+}
 
 :focus {
     outline: 3px solid var(--clr-accent);
@@ -68,6 +74,12 @@ strong{ font-weight: var(--fw-bold)}
 }
 
 /* Buttons */
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
 
 .btn {
     display: inline-block;
@@ -248,8 +260,14 @@ header{
 
 /* Intro section */
 
-.intro {
-    position: relative;
+/* .intro {
+    /* position: relative; */
+    
+/* } */ 
+
+.intro--name{
+    display: flex;
+    justify-content: center;
 }
 
 .intro__img{
@@ -262,23 +280,26 @@ header{
 
 @media (min-width: 600px) {
     .intro{
-        display: grid;
-        width: min-content;
-        margin: 0 auto;
-        grid-column-gap: 1em;
+        display: flex;
+        width: 50em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        /* grid-column-gap: 2em;
         grid-template-areas: 
             "img title"
             "img subtitle";
-        grid-template-columns: min-content max-content;
+        grid-template-columns: min-content max-content; */
     }
 
-    .intro__img {
+    /* .intro__img {
         grid-area: img;
         min-width: 250px;
         position: relative;
         z-index: 2;
     
-    }
+    } */
 
     .section__subtitle--intro{
         align-self: start;
@@ -324,15 +345,37 @@ header{
 }
 .services {
     margin-bottom: 4em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .service {
-    max-width: 1500px;
-    margin: 6 auto;
+    max-width: 20em;
+    width: 30em;
+    margin: 10px;
+    text-align: left;
+    padding: 1em;
+    box-sizing: border-box;
 }
 
 .service b{
     color: var(--clr-accent);
+}
+
+.service h2{
+    text-align: left;
+    opacity: 0.2;
+    font-size: 70px;
+}
+
+.service p {
+    max-width: 20em;
+}
+
+.service p > b{
+    text-decoration-color: aqua;
 }
 
 .companies{
