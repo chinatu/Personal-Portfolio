@@ -15,22 +15,22 @@ navLinks.forEach(link => {
     })
 })
 
-my_work.addEventListener('click', () => {
-    modal_container.classList.add('show');
-    disableScrolling();
-})
+// my_work.addEventListener('click', () => {
+//     modal_container.classList.add('show');
+//     disableScrolling();
+// })
 
-continue_button.addEventListener('click', () => {
-    modal_container.classList.remove('show');
-    window.location.replace("#work");
-    enableScrolling();
-})
+// continue_button.addEventListener('click', () => {
+//     modal_container.classList.remove('show');
+//     window.location.replace("#work");
+//     enableScrolling();
+// })
 
-go_to_github_button.addEventListener('click', () => {
-    modal_container.classList.remove('show');
-    window.location.replace("https://github.com/chinatu/chinatu/blob/main/README.md#-examples-of-my-work-");
-    enableScrolling();
-})
+// go_to_github_button.addEventListener('click', () => {
+//     modal_container.classList.remove('show');
+//     window.location.replace("https://github.com/chinatu/chinatu/blob/main/README.md#-examples-of-my-work-");
+//     enableScrolling();
+// })
 
 function disableScrolling(){
     var x=window.scrollX;
@@ -61,5 +61,54 @@ function typeText() {
     }, 100); // Adjust the interval to control typing speed
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
+    let intervalId;
+  
+    function showItem(index) {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+  
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % items.length;
+      showItem(currentIndex);
+    }
+  
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      showItem(currentIndex);
+    }
+  
+    function startAutoplay() {
+      intervalId = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
+  
+    function stopAutoplay() {
+      clearInterval(intervalId);
+    }
+  
+    prevButton.addEventListener('click', () => {
+      prevSlide();
+      stopAutoplay();
+      startAutoplay(); // Restart autoplay after manual navigation
+    });
+  
+    nextButton.addEventListener('click', () => {
+      nextSlide();
+      stopAutoplay();
+      startAutoplay(); // Restart autoplay after manual navigation
+    });
+  
+    // Start autoplay when the page loads
+    startAutoplay();
+  
+    // Optional: Pause autoplay when hovering over the carousel
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+  });
 // Call the function to start the typing effect
 typeText();
