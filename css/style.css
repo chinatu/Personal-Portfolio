@@ -394,6 +394,18 @@ header{
     text-decoration-color: aqua;
 }
 
+.company-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em; /* Adjust the margin as needed */
+}
+
+.company-logo {
+    max-width: 100px; /* Adjust the size as needed */
+    margin: 0 1em; /* Adjust the spacing between logos as needed */
+}
+
 .companies{
     display: block;
     justify-content: center;
