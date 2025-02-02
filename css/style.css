@@ -367,12 +367,13 @@ header{
 }
 
 .service {
-    max-width: 20em;
-    width: 30em;
-    margin: 10px;
+    flex: 1 1 calc(25% - 1em); /* Adjust the width to 25% minus some margin */
+    margin: 0.5em; /* Add some margin for spacing */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    max-width: none;
+    width: 100%;
     text-align: left;
     padding: 1em;
-    box-sizing: border-box;
 }
 
 .service b{
@@ -399,6 +400,11 @@ header{
     align-items: center;
   }
 
+  .duration {
+    font-style: italic;
+    color: #555; /* Adjust the color as needed */
+    margin-bottom: 0.5em; /* Add some spacing below the duration */
+}
   /*
 
   .grid-item {
